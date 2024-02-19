@@ -1,0 +1,56 @@
+{
+  "name": "bidabhi-auction",
+  "version": "0.1.1",
+  "description": "An auction website for semester project exam 2",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/scss:dist/css",
+    "watch": "sass --watch src/scss:dist/css & live-server",
+    "format": "prettier -w src/**/*.js",
+    "lint": "eslint src/**/*.js",
+    "lint-fix": "eslint src/**/*.js --cache --fix",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sayeda-chattopadhyay/BidAbhi-Auction.git"
+  },
+  "keywords": [
+    "auction",
+    "semester",
+    "project",
+    "noroff",
+    "api"
+  ],
+  "author": "Sayeda Chattopadhyay <sayeda.b@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sayeda-chattopadhyay/BidAbhi-Auction/issues"
+  },
+  "homepage": "https://github.com/sayeda-chattopadhyay/BidAbhi-Auction#readme",
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "live-server": "^1.1.0",
+    "prettier": "^2.8.3",
+    "sass": "^1.58.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write"
+    ]
+  }
+}

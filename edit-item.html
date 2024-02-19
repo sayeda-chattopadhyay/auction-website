@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="You can edit your items" />
+    <title>Edit listing | BidAbhi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <script src="/src/js/index.mjs" defer type="module"></script>
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-lg">
+      <div
+        class="container-fluid shadow bg-light d-flex flex-sm-row justify-content-evenly"
+      >
+        <div>
+          <a href="/index.html" class="navbar-brand"
+            ><img src="/images/Logo.png" alt="logo"
+          /></a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Ul -->
+        <div class="collapse navbar-collapse" id="navbarText">
+          <!--center of nav  -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link fs-5 active" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="/listing.html">Listings</a>
+            </li>
+            <li class="nav-item" id="profileThumbnail">
+              <a href="/profile.html" class="nav-link fs-5"> Profile </a>
+            </li>
+          </ul>
+          <!--right side of nav  -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!-- Log in -->
+            <li class="nav-item" id="loginBtn">
+              <a class="nav-link fs-5" href="/login.html">Login</a>
+            </li>
+            <!-- Sign Up -->
+            <li class="nav-item" id="signBtn">
+              <a
+                href="/signup.html"
+                class="text-decoration-none text-light btn btn-primary ml-5"
+              >
+                <strong>Sign up</strong></a
+              >
+            </li>
+            <!-- logout -->
+            <li class="nav-item logout" id="logOut">
+              <button class="nav-link fs-5 btn btn-link">Log out</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- create listing form-->
+    <div class="container col-xxl-8 px-4 py-5">
+      <div><a href="/profile.html">Back</a></div>
+      <div class="row align-items-center g-5 py-5">
+        <div
+          class="d-flex flex-column justify-content-center w-50 mx-auto mt-5 bg-light p-5"
+        >
+          <div class="h1 my-3">Edit Item</div>
+          <form action="" id="edit-listing">
+            <div class="text-center" id="error-showing-container"></div>
+            <div class="form-group mb-3">
+              <label for="title" class="form-label">Title</label>
+              <input
+                class="form-control p-2"
+                type="text"
+                name="title"
+                placeholder="Your item name"
+                title="A title is required"
+                required
+              />
+            </div>
+            <div class="form-group mb-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea
+                class="form-control p-2"
+                id="description"
+                name="description"
+                rows="3"
+                maxlength="240"
+                placeholder="Description your item"
+              ></textarea>
+            </div>
+            <div class="form-group mb-3">
+              <label for="endsAt">Ending Date</label>
+              <input
+                class="form-control"
+                type="datetime-local"
+                name="endsAt"
+                title="an ending date is required"
+                required
+              />
+            </div>
+            <!-- <div class="form-group mb-3">
+              <label for="tags">Tags (separate by comma)</label>
+              <input
+                class="form-control"
+                type="text"
+                name="tags"
+                placeholder="tag1 ,tag2 ,tag3 "
+                title="add tags to your listing"
+                required
+              />
+            </div> -->
+            <div class="form-group mb-3">
+              <label for="media">Image 1</label>
+              <input
+                class="form-control p-2"
+                type="url"
+                name="media"
+                placeholder="Insert image url"
+                id="media"
+                title="insert an image of your item"
+                required
+              />
+            </div>
+            <div class="form-group mb-3">
+              <label for="media">Image 2</label>
+              <input
+                class="form-control p-2"
+                type="url"
+                name="media"
+                placeholder="Insert image url"
+                id="media"
+                title="insert an image of your item"
+                required
+              />
+            </div>
+            <button class="btn btn-primary">Edit Item</button>
+            <a href="/profile.html" class="btn btn-warning">Cancel</a>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="container-fluid bg-footer text-white px-3">
+      <footer class="row row-cols-1 row-cols-sm-2 py-5 my-5 border-top">
+        <div class="col mb-3">
+          <div class="">
+            <p class="h1">BidAbhi</p>
+            <!-- <img src="" alt="logo" /> -->
+          </div>
+          <br />
+          <p class="text-white">© 2023 BidAbhi</p>
+          <p class="text-white">
+            <strong>Creater By :</strong>Sayeda Chattopadhyay
+          </p>
+        </div>
+        <div class="col mb-3">
+          <h5>Built With</h5>
+          <hr />
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">Noroff API</li>
+            <li class="nav-item mb-2">SASS</li>
+            <li class="nav-item mb-2">HTML</li>
+            <li class="nav-item mb-2">CSS</li>
+            <li class="nav-item mb-2">JavaScript</li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

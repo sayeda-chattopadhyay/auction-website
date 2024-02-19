@@ -1,0 +1,32 @@
+/* Bootstrap  edited styles*/
+
+@import "variables";
+
+@import "./customised/loader";
+
+@import "./customised/header";
+
+@import "./customised/button";
+
+@import "./customised/image";
+
+/* Bootstrap default styles */
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+/* Original styles */
+
+// @import "./components/header";
+
+// .helpMessage {
+//   display: none;
+// }
+
+// input:invalid + .helpMessage {
+//   display: block;
+// }
+
+// * {
+//   outline: 2px solid red;
+// }

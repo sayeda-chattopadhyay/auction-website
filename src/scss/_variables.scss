@@ -1,0 +1,68 @@
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+$blue: #0053b3;
+$indigo: #5e0de0;
+//$purple: #5a23c1;
+$pink: #d63384;
+$red: #d71c2fe7;
+
+//$yellow: #ffc107;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
+
+// Customised Color Pallete
+
+$searchBtn: #5cb6d5;
+$footerColor: #355969;
+$yellow: #fbcd25;
+$purple: #772278;
+$orange: #cb4b30;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
+
+// $primary: $orange;
+$primary: $purple;
+$secondary: $orange;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-900;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "footer": $footerColor,
+  "searchBtn": $searchBtn,
+  "importantText": $red,
+);
+
+// Font family
+
+$font-family-sans-serif: "Roboto", sans-serif;

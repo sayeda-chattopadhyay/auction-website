@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="BidAbhi is a reliable auction website where you can add your items for bidding and bid on different items"
+    />
+    <title>Home | BidAbhi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <script src="/src/js/index.mjs" defer type="module"></script>
+  </head>
+  <body>
+    <!-- nav bar -->
+    <nav class="navbar sticky-top navbar-expand-lg">
+      <div
+        class="container-fluid d-flex flex-sm-row justify-content-evenly shadow bg-light"
+      >
+        <div>
+          <a href="/index.html" class="navbar-brand"
+            ><img src="/images/Logo.png" alt="logo"
+          /></a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Ul -->
+        <div class="collapse navbar-collapse" id="navbarText">
+          <!--center of nav  -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link fs-5 fw-bold active" href="/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5" href="/listing.html">Listings</a>
+            </li>
+            <li class="nav-item" id="profileThumbnail">
+              <a href="/profile.html" class="nav-link fs-5"> Profile </a>
+            </li>
+          </ul>
+          <!--right side of nav  -->
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <!-- Log in -->
+            <li class="nav-item" id="loginBtn">
+              <a class="nav-link fs-5" href="/login.html">Login</a>
+            </li>
+            <!-- Sign Up -->
+            <li class="nav-item" id="signBtn">
+              <a
+                href="/signup.html"
+                class="text-decoration-none text-light btn btn-primary ml-5"
+              >
+                <strong>Sign up</strong></a
+              >
+            </li>
+            <!-- logout -->
+            <li class="nav-item logout" id="logOut">
+              <button class="nav-link fs-5 btn btn-link">Log out</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- nav bar end -->
+    <main>
+      <!-- hero section start -->
+      <section
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="false"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active c-item bg-dark">
+            <img
+              src="/images/hammer-719068_1920.jpg"
+              class="d-block w-100 c-img"
+              alt="..."
+            />
+            <div class="carousel-caption">
+              <h2>First slide label</h2>
+              <p class="h5">
+                Some representative placeholder content for the first slide.
+              </p>
+              <a
+                href="/listing.html"
+                class="btn btn-primary carouselBtn px-4 py-2 fs-5 mt-5"
+                >Explore</a
+              >
+            </div>
+          </div>
+          <div class="carousel-item c-item bg-dark">
+            <img
+              src="/images/fashion-8.jpg"
+              class="d-block w-100 c-img"
+              alt="..."
+            />
+            <div class="carousel-caption">
+              <h2>Second slide label</h2>
+              <p class="h5">
+                Some representative placeholder content for the second slide.
+              </p>
+              <a
+                href="/fashion.html"
+                class="btn btn-primary carouselBtn px-4 py-2 fs-5 mt-5"
+                >Explore Fashion</a
+              >
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </section>
+      <!-- over view section -->
+      <section class="overview mb-5">
+        <div class="container h-100 d-flex align-items-center">
+          <div class="row w-100 text-center fs-4">
+            <div class="col-xl">
+              <i class="bi bi-currency-exchange me-2 text-primary"></i> Get 1000
+              credit points
+            </div>
+            <div class="col-xl">
+              <i class="bi bi-cart-fill me-2 text-primary"></i> Sell your items
+            </div>
+            <div class="col-xl">
+              <i class="bi bi-trophy-fill me-2 text-primary"></i>Bid and win
+              unique items
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- heading and search -->
+
+      <section class="row mb-4 justify-content-evenly p-4">
+        <div class="col-12 col-sm-7 col-md-4">
+          <form class="d-flex" role="search" id="searchListing">
+            <input
+              class="form-control me-2"
+              type="text"
+              placeholder="Search by tag"
+              aria-label="Search"
+              name="tag"
+              id="searchInput"
+              required
+            />
+            <button class="btn btn-success" type="submit">Search</button>
+            <button class="btn btn-info ms-2" id="clear-search" type="submit">
+              Clear
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- listing container -->
+      <section class="container mt-4">
+        <!-- ending soon -->
+        <div class="container-fluid mt-4 bg-light shadow">
+          <p class="h1 mx-5 mb-5 text-center p-4"><ins>Ending Soon</ins></p>
+          <div class="row" id="listingsContainer"></div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <div class="container-fluid bg-footer text-white px-3">
+      <footer class="row row-cols-1 row-cols-sm-2 py-5 my-5 border-top">
+        <div class="col mb-3">
+          <div class="">
+            <p class="h1">BidAbhi</p>
+            <!-- <img src="" alt="logo" /> -->
+          </div>
+          <br />
+          <p class="text-white">© 2023 BidAbhi</p>
+          <p class="text-white">
+            <strong>Creater By :</strong>Sayeda Chattopadhyay
+          </p>
+        </div>
+        <div class="col mb-3">
+          <h5>Built With</h5>
+          <hr />
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">Noroff API</li>
+            <li class="nav-item mb-2">SASS</li>
+            <li class="nav-item mb-2">HTML</li>
+            <li class="nav-item mb-2">CSS</li>
+            <li class="nav-item mb-2">JavaScript</li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

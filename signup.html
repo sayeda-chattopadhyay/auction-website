@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Creating an account allows you to view auction results, discover more, stay up to date and manage your activity."
+    />
+    <title>Sign up | BidAbhi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <script src="/src/js/handlers/signup.mjs" defer type="module"></script>
+  </head>
+  <body>
+    <div
+      class="container d-flex flex-column flex-lg-row justify-content-evenly mt-5 pt-5"
+    >
+      <div class="row">
+        <div
+          class="col-12 col-md-7 mt-lg-4 d-flex flex-column align-items-center align-items-md-start mx-auto mx-lg-0"
+        >
+          <a href="./index.html"><img src="./images/Logo.png" alt="" /></a>
+          <p class="w-75 fs-5 mb-5">
+            Welcome to BidAbhi. This is an auction website. You can sign up, log
+            in or explore (without logging in ). Thank you for bidding or
+            autioning at BidAbhi.
+          </p>
+          <a href="/index.html" class="btn btn-secondary"
+            ><strong>Explore</strong></a
+          >
+        </div>
+        <div class="col-12 col-md-5">
+          <p class="h1 pb-5 text-center">Create an account</p>
+          <p class="mb-5">
+            Creating an account allows you to view auction results, discover
+            more, stay up to date and manage your activity.
+          </p>
+          <form action="" id="registerForm">
+            <div class="form-group mb-3">
+              <label for="name">Name</label>
+              <input
+                class="form-control"
+                type="text"
+                name="name"
+                required
+                pattern="^[\w]+$"
+                maxlength="20"
+                title="The name value must not contain punctuation symbols apart from underscore (_). "
+                autocomplete="username"
+                placeholder="name_surname"
+              />
+            </div>
+            <div class="form-group mb-3">
+              <label for="email">Email</label>
+              <input
+                class="form-control"
+                type="email"
+                name="email"
+                required
+                pattern="^[\w\-.]+@(stud.)?noroff.no$"
+                title="The email value must be a valid stud.noroff.no or noroff.no email address."
+                autocomplete="username"
+                placeholder="name.surname@stud.noroff.no"
+              />
+            </div>
+            <div class="form-group mb-3">
+              <label for="password">Password</label>
+              <input
+                class="form-control"
+                type="password"
+                name="password"
+                required
+                minlength="8"
+                title="The password value must be at least 8 characters."
+                placeholder="password"
+                autocomplete="current-password"
+              />
+            </div>
+            <div class="form-group mb-3">
+              <label for="avatar">avatar</label>
+              <input
+                class="form-control"
+                type="url"
+                name="avatar"
+                placeholder="Insert url"
+              />
+            </div>
+            <button class="w-100 btn btn-lg btn-primary">Sign Up</button>
+          </form>
+
+          <div class="row text-center my-4">
+            <p>
+              Already have an account?
+              <strong> <a href="./login.html">Log in</a> </strong>
+            </p>
+          </div>
+          <div id="confirm-message"></div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
