@@ -1,12 +1,9 @@
 import { load } from "../storage/index.mjs";
 
-
-
 /**
  * Shows Log out, sign in and log out button
  * It shows profile and logout buttons if there is token
  */
-
 
 export function userLoggedIn() {
   const loginBtn = document.getElementById("loginBtn");
@@ -15,7 +12,6 @@ export function userLoggedIn() {
   const token = load("token");
 
   const logOut = document.getElementById("logOut");
-
 
   profileThumbnail.style.display = "none";
   signBtn.style.display = "block";
@@ -30,7 +26,8 @@ export function userLoggedIn() {
     loginBtn.style.display = "none";
   } else {
     logOut.style.display = "none";
+    profileThumbnail.style.display = "none";
+    signBtn.style.display = "block";
+    loginBtn.style.display = "block";
   }
 }
-
-
