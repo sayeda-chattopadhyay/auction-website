@@ -10,11 +10,13 @@ export function setLogoutBUttonListener() {
 
   if (logOutButton) {
     logOutButton.addEventListener("click", () => {
-      if (confirm("Are you sure you want to log out")) {
+      if (confirm("Are you sure you want to log out?")) {
         localStorage.removeItem("profile");
         localStorage.removeItem("token");
         window.location.replace("/login.html");
       }
     });
+  } else {
+    console.error("logOutButton not found");
   }
 }
