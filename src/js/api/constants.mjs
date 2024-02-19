@@ -2,6 +2,8 @@
 
 export const baseURL = "https://api.noroff.dev/api/v1/auction";
 
+// The API base URL for v2 is https://v2.api.noroff.dev/auction ( Links to an external site. )
+
 // Auction auth endpoints for register
 
 export const authRegister = "/auth/register";
