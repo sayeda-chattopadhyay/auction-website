@@ -17,7 +17,7 @@ const method = "post";
 export async function login(profile) {
   try {
     const errorMessage = document.getElementById("errorMessage");
-    console.log(errorMessage);
+ 
     const url = loginURL;
 
     const userToLoginObject = {
@@ -36,9 +36,9 @@ export async function login(profile) {
       storage.save("token", accessToken);
 
       storage.save("profile", profileDetails);
-
-    
+  
       window.location.replace("/index.html");
+
     } else {
       throw new Error("Incorrect username or password");
     }

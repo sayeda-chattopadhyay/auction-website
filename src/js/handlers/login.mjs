@@ -1,10 +1,5 @@
 import { login } from "../api/auth/login.mjs";
 
-/**
- * Login listener function, directs users to home page if successful
- * 
- */
-
 export function setLoginFormListener() {
   const form = document.querySelector("#loginForm");
 
@@ -19,7 +14,8 @@ export function setLoginFormListener() {
       try {
         // send it to Api
         await login(profile);
-    
+        // Clear form fields after successful login
+        form.reset();
       } catch (error) {
         console.log("error:", error);
       }
