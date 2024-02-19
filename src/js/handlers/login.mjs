@@ -6,8 +6,8 @@ export function setLoginFormListener() {
   if (form) {
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
-      const form = event.target;
-      const formData = new FormData(form);
+      const submittedForm = event.target;
+      const formData = new FormData(submittedForm);
       const profile = Object.fromEntries(formData.entries());
       console.log(profile);
 
@@ -15,7 +15,7 @@ export function setLoginFormListener() {
         // send it to Api
         await login(profile);
         // Clear form fields after successful login
-        form.reset();
+        submittedForm.reset();
       } catch (error) {
         console.log("error:", error);
       }
