@@ -19,12 +19,17 @@ export async function register(profile) {
     const response = await fetch(url, userToRegister);
 
     const result = await response.json();
-    confirm("You are now registered.Please Log In");
-    window.location.replace("/login.html");
+    const confirmMessage = document.getElementById("confirm-message");
+    confirmMessage.textContent = "You are now registered.Please Log In";
+    // confirm("You are now registered.Please Log In");
+    // Redirect to login page after a delay
+    setTimeout(() => {
+      window.location.replace("/login.html");
+    }, 3000);
 
     return result;
   } catch (error) {
     console.log(error);
-    // displayError("errorMessage", error);
+    throw error;
   }
 }
